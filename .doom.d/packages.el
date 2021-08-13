@@ -49,5 +49,41 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
+;; (package! rotate :pin "4e9ac3ff800880bd9b705794ef0f7c99d72900a6")
+;; (package! ess-view :pin "925cafd876e2cc37bc756bb7fcf3f34534b457e2")
+;; (package! selectric-mode :pin "1840de71f7414b7cd6ce425747c8e26a413233aa")
+;; (package! spray :pin "74d9dcfa2e8b38f96a43de9ab0eb13364300cb46")
+
+;; -*- no-byte-compile: t; -*-
+;;; private/my/packages.el
+
+;; disabled packages
+(disable-packages! solaire-mode
+                   realgud
+                   realgud-trepan-ni
+                   anaconda-mode
+                   company-anaconda
+                   lsp-python-ms
+                   pyimport)
+
+;; text
+;; (package! org-wild-notifier)
+(package! tldr)
+(package! link-hint)
+(package! symbol-overlay)
+
+;; misc
 (package! fira-code-mode) ;; Fix fira code ligatures
 (package! resize-window)
+(package! keycast)
+(package! evil-string-inflection)
+(package! all-the-icons-ibuffer)
+(package! dired-narrow)
+(package! git-link)
+(package! imenu-list)
+(package! tmux-pane)
+(package! lsp-docker)
+(package! highlight-indent-guides)
+
+;; programming
+(package! bazel-mode :recipe (:host github :repo "bazelbuild/emacs-bazel-mode"))
