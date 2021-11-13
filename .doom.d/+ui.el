@@ -1,6 +1,6 @@
 ;; Theme and fonts
 ;; (setq doom-font (font-spec :family "FiraCode":size 15 ))
-(setq doom-font (font-spec :family "JetBrains Mono":size 15 ))
+(setq doom-font (font-spec :family "JetBrains Mono":size 22 ))
 ;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 (after! doom-themes
   (setq doom-themes-enable-bold t
@@ -14,12 +14,9 @@
 (setq doom-theme 'doom-dracula)
 (after! doom-themes
   (setq doom-neotree-enable-variable-pitch t))
-
-;; (use-package fira-code-mode
-;;   :custom (fira-code-mode-disabled-ligatures '("[]" "#{" "#(" "#_" "#_(" "x")) ;; List of ligatures to turn off
-;;   :hook prog-mode) ;; Enables fira-code-mode automatically for programming major modes
-;;   :config (fira-code-mode-set-font) ;; set fira code font in case another font is being used to display the ligatures
-
+;; Set transparency
+(set-frame-parameter (selected-frame) 'alpha '(85 . 50))
+(add-to-list 'default-frame-alist '(alpha . (85 . 50)))
 ;; Set NEOTree
 (after! neotree
   (setq neo-smart-open t

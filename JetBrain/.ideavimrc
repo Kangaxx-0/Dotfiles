@@ -46,10 +46,10 @@ nnoremap N Nzzzv
 nnoremap <space>w <c-w>
 
 " Map easymotion
-map <leader>f <plug>(easymotion-f)
-map <leader>s <plug>(easymotion-s)
-map <leader>F <plug>(easymotion-F)
-map <leader>S <plug>(easymotion-S)
+nmap f <plug>(easymotion-f)
+nmap s <plug>(easymotion-s)
+nmap F <plug>(easymotion-F)
+nmap S <plug>(easymotion-S)
 
 " map Alt key
 nnoremap <A-f> : action ActivateStructureToolWindow<cr>
@@ -63,6 +63,7 @@ nnoremap <space>t :action FileStructurePopup<cr>
 nnoremap <space>T :action GotoSymbol<cr>
 nnoremap <space>a :action GotoAction<cr>
 nnoremap gD :action FindUsages<cr>
+nnoremap gi :action ReSharperGotoImplementation<cr>
 nnoremap <space>] :action GotoImplementation<cr>
 nnoremap <space>[ :action GotoSuperMethod<cr>
 nnoremap <space>gt :action GotoTest<cr>
@@ -76,7 +77,8 @@ nnoremap <C-r> $Redo
 " Git
 nnoremap <space>d :action Compare.SameVersion<cr>
 nnoremap <space>b :action Git.Branches<cr>
-nnoremap <space>B :action Annotate<cr>
+nnoremap <space>gB :action Annotate<cr>
+nnoremap <space>gg :action CheckinProject<cr>
 
 " visual mode map
 vmap gc :action CommentByLineComment<cr>

@@ -10,7 +10,7 @@
       user-mail-address "damn.frank2z@gmail.com")
 
 ;; Set projectile project search path
-(setq projectile-project-search-path '("~/CommunityLeader/" "~/Repo/"))
+;; (setq projectile-project-search-path '("~/CommunityLeader/" "~/Repo/"))
 
 ;;   (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
 ;;   (lsp-headerline-breadcrumb-mode))
