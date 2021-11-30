@@ -53,6 +53,7 @@ nmap S <plug>(easymotion-S)
 
 " map Alt key
 nnoremap <A-f> : action ActivateStructureToolWindow<cr>
+nnoremap <A-k> : action ShowErrorDescription<cr>
 " actions
 nnoremap <space>q :action CloseContent<cr>
 nnoremap <space>Q :action ReopenClosedTab<cr>
@@ -69,10 +70,12 @@ nnoremap <space>[ :action GotoSuperMethod<cr>
 nnoremap <space>gt :action GotoTest<cr>
 nnoremap <space>k :action HighlightUsagesInFile<cr>
 nnoremap <space>r :action RenameElement<cr>
+nnoremap <space>sp :action FindInPath<cr>
+nnoremap <space>ot :action ActivateTerminalToolWindow<cr>
 
 " Map commentary
-nnoremap gcc :action CommentByLineComment<cr>
-nnoremap <C-r> $Redo
+ nmap gc :action CommentByLineComment<cr>
+" nnoremap <C-r> $Redo
 
 " Git
 nnoremap <space>d :action Compare.SameVersion<cr>
@@ -85,7 +88,7 @@ vmap gc :action CommentByLineComment<cr>
 vmap <leader>u d~h " remove selection and toggle case. e.g. `v2l<leader>u`: `getproperty` -> `property`
 
 " Insert mode map
-inoremap <C-R> <C-r>
+" inoremap <C-R> <C-r>
 
 " just makes me nervous
 map h h
