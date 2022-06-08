@@ -1,0 +1,748 @@
+ls
+nvim
+cd ~
+nvim ~/.config/nushell/
+where alcarity
+where
+cd ./Downloads/
+ls
+ls | sort-by modified
+tar -xfz ./alacritty.1.gz
+tar -fz ./alacritty.1.gz
+tar -xf ./alacritty.1.gz
+rm ./alacritty.1.gz
+ls
+alacritty --v
+alacritty --version
+mkdir ~/.cache/starship
+starship init nu | save ~/.cache/starship/init.nu
+$nu.config-path
+cd ./.config/nushell/
+nvim
+ls -la
+nvim ./config.nu
+ls
+ks
+ls
+cd ./Repos/Github/nushell/
+nvim ~/.config/nushell/config.nu
+cd ./Repos/Github/nushell/
+gl
+nvim
+nvim ~/.config/alacritty/alacritty.yml
+nvim
+cd ~/.config/
+ls
+cd ./nvim/
+ls
+cd lua
+ls
+cd ./gaxx/
+ls
+vi ./cmp.lua
+nvim
+vi ./cmp.lua
+nvim
+append
+tldr append
+tldr --update
+tldr append
+$nu
+$nu.config-path
+ls $nu.config-path
+env
+append
+Usage: append
+help
+help append
+help let-env
+env
+env.PATH
+$env
+$env.PATH
+help command
+help commands
+help commands | where is_custom=false
+help commands | where is_custom = false
+help commands | where is_custom == false
+help commands | where is_custom == true
+$false
+false
+1
+true
+"stirng"
+dsa
+help commands | where is_custom == $true
+help commands | where is_custom == true
+help commands | where is_custom == false | first 20
+help drop
+help commands | where is_custom == false | first 20 | drop column 2
+help commands | where is_custom == false | first 20 | drop column 1
+help commands | where is_custom == false | first 20 | drop column
+help reject
+help str
+help str  reverse
+"NUshell"
+"NUshell" | str 
+"NUshell" | str reverse
+~
+ls
+cd ./Downloads/
+ls
+tldr ps
+tldr kill
+sys
+sys -la
+tldr sys
+help sys
+sys.mem
+(sys).mem
+get
+help get
+sys | get 
+sys | get mem
+sys
+sys | get mem |to 
+ls
+sys | get mem |to json
+sys | get mem |to json |clip
+version
+version | get features
+help line
+help lines
+cargo search shells --limit 10
+cargo search shells --limit 10 | lines
+nvim  $nu.config-path
+ls
+cd ~
+ls
+cd ./Repos/Github/nushell/
+ls
+nvim
+nvim --version
+find
+help find
+ls 
+ls -la
+ls -la | order-by
+help sort-by
+ls -la 
+ls -la | sort-by size 
+ls -la | sort-by size | select
+ls -la | sort-by size | select 10
+help select
+pick
+help commands
+ls -la | sort-by size | take 10
+ls -la | sort-by size | reverse| take 10 
+ls
+htop
+fdsa
+nvim 
+nvim
+nvim --version
+ls
+$config
+help commands
+help nu-highlight
+"let x=3"
+"let x=3" | nu-highlight
+ls
+cd ~/Repos/Github/
+cd ./nushell/
+ls
+nvim
+nvim --version
+where nvi
+where nvim
+nvim
+env
+env.PATH
+$env.path
+$env.PATH
+~open .
+'open<\n><\n>`<\n><\n>'
+*open
+&open
+^open 
+@open 
+~open .
+^open 
+^open .
+eixt
+nu
+open .
+ls
+$env.PATH
+ls /usr/bin/
+ls /usr/bin/ | where name =~"neo"
+ls /usr/bin/ | where name =~ "neo"
+$env.PATH
+which nvim
+l -la ./.local/bin/
+ls -la ./.local/bin
+cd ./.local/bin/
+ls
+mv nvim nvim.bk
+ls
+nvim
+wget
+ls ~/Downloads/
+ls ~/Downloads/ | sort-by modified
+ls ~/Downloads/ | sort-by modified | reverse
+mv ~/Downloads/nvim.appimage nvim
+ls -la
+nvim
+ls -la 
+sudo chmod 777 ./nvim
+ls -la
+nvim
+cd ..
+ls
+cd ~/.config/nushell/
+cd ../nvim/
+gl
+nvim
+help ls
+ls -d
+cd ~
+ls
+cd ./Frank/
+ls
+mkdir testfolder
+cd ./testfolder/
+ls
+mkdir folder1
+mkdir folder2
+mkdir folder3
+ls -la
+help touch
+cd ./folder1/
+touch fold1.txt
+ls
+cd ..
+cd ./folder2/
+touch fold2.txt
+cd ../folder3/
+touch fold3.txt
+cd ~
+ls -la
+ls 
+ls ./Frank/
+help cp
+cp ./Frank/testfolder/ ~/Downloads/
+lsl
+ls
+cd ./Frank/
+ls
+help mv
+mv ./testfolder/ ../Downloads/
+ls
+cd ../Downloads/
+ls
+touch 1.txt
+touch 2.txt
+touch 3.txt
+ls
+mv *.txt ~/Frank/
+help cp
+cd ~/Frank/
+ls
+cp *.txt ~/Downloads/
+ls ~/Downloads/
+ls
+mv *.txt /test
+mkdir test
+mv *.txt /test
+ls
+mv *.txt ./test/
+rm test/
+rm ~/Frank/test/
+cd ~
+ls
+rm ~/Frank/test/
+help cp
+help mv
+gl
+ls
+pwd
+gl
+gcb gaxx/addCPExample
+gl
+git checkout -b gaxx/CPExample
+help p
+p
+ls
+cd ./Repos/Github/
+ls
+du 
+git clone git@github.com:Kangaxx-0/nushell.git
+git clone git@github.com:Kangaxx-0/nushell.git Gaxx-nushell
+nvim
+ls
+cd ./Gaxx-nushell/
+$env
+ls
+cd ./Repos/Github/
+ls
+cd ./Gaxx-nushell/
+gst
+grv
+gva
+git remote add upstream git@github.com:nushell/nushell.git
+grv
+git fetch remote
+git fetch upstream
+git merge upstream/main
+ls
+gst
+git log -1
+gl
+git log -1
+gst
+ls
+cd ./.config/nushell/
+cargo build --workspace --features=extra
+nvim
+ls ./target/debug/ | sort-by modified | reverse
+mv ./target/debug/nu ~/.cargo/bin/
+$env
+eix
+$env
+code
+$env.path
+$env.PATH
+cd ~
+cd ./Downloads/
+ls
+mv ./code_1.67.1-1651841865_amd64.deb vscode.deb
+ls
+apt install ./vscode.deb
+sudo apt install ./vscode.deb
+code
+l
+$env.config
+ls
+$env.config
+ls
+nvim ~/.config/nushell/
+$env.config
+help overlay
+help for
+$env.config
+help let-env
+let-env TEST=1
+let-env TEST = 1
+$env
+ls
+nvim
+ls
+help find
+ls -la
+cd ./share
+cd .share
+ls
+ls -la
+cd .local/
+ls
+cd share/
+ls
+cd nvim/
+ls
+cd project_nvim/
+ls
+cd ..
+ls
+cd site/
+ls
+cd pack/
+ls
+cd packer/
+ls
+ls opt/
+ls
+cd opt/
+ls
+cd ../
+cd start/
+ls
+rm -rf toggleterm.nvim/
+nvim ~/.config/nushell/
+nvim
+$env.config
+$env
+keybindings default
+$env.config
+ls
+help ls
+help mkdir
+help let-env
+git merge upstream/main
+gst
+ls
+help complete
+^ls
+~ls
+^ls -la
+help enter
+enter ~
+ls
+enter  ~/Downloads/
+p
+help commands
+help commands | where name == "shell"
+help commands | where category == "shell"
+help commands | where category == "shells"
+shells
+exit
+shells
+^ls
+~vi
+^vi
+vi 
+ls
+vi
+ls
+^ls
+ls
+cc
+cl
+cleqr
+clear
+ls
+emacs
+ls
+emacs ~/.config/nushell/config.nu
+notepad
+tmux
+editor
+editor ~/.config/nushell/config.nu
+help commands
+help sys
+help to
+help fmt
+help commands
+help alias
+help which
+printenv
+visual
+$env
+ls
+cd Repos/
+ls
+cd Github/
+cd Gaxx-nushell/src/
+cd ..
+gva
+grv
+git fetch upstrea,
+git fetch upstream
+git merge upstream/main
+gst
+gl
+gst
+cargo build --workspace --features=extra && cargo run --features=extra
+ls
+mv target/debug/nu ~/.cargo/bin/
+config env
+cd ~
+ls
+du -h
+du -a
+env
+ppppppppppppppppp0\=\
+\
+\9
+clear
+$env.config
+gti fetch upstream/main
+git fetch upstream/main
+git fetch upstream\main
+git fetch upstream/main
+gva
+gra
+grv
+git fetch upstream/main
+git fetch upstream
+git merge upstream
+git merge upstream/main
+gl
+gst
+ls
+gl
+config nu
+ls
+help select
+ls | select name
+ls | get name
+ls | get  name
+ls | select name
+help keybindings
+help commands
+env.config
+$env.config
+$env.config.menus
+config show
+clear
+config show
+clear
+$env.config.keybindings
+$env.config
+$env.config.keybindings
+gl
+gco gaxx/FixCp
+gco gaxx/FixCP
+gst
+ls
+cd ~/Downloads/
+ls
+ln -s 1.txt test.txt
+ls
+cd ~/Downloads/
+ls
+cd ~/Downloads/
+ls
+cd ~/Downloads/
+ls
+cp -i test.txt test.txt
+ehco test | save 1.txt
+echo  test | save 1.txt
+less 1.txt
+ls -la
+rm test1.txt
+rm test.txt
+ln -s 1.txt test.txt
+cp -i test.txt 1.txt
+less 1.txt
+open 1.txt
+cat 1.txt
+less 1.txt
+ls -la
+cat 1.txt
+rm test.txt
+ls
+echo test | 1.txt
+ls
+cat 1.txt
+less 1.txt
+echo test | save 1.txt
+cat 1.txt
+cd ~/Downloads/
+ls
+cp -i test.txt 1.txt
+cp -i test.text 1.txt
+cp test.text test.text
+ls
+cp -i test.text test.text
+cp 1.txt 1.txt
+ls
+cat 4.txt
+cd ~/Repos/Github/
+ls
+cd Gaxx-nushell/
+g
+gl
+gco .
+gl
+gco main
+gl
+gf
+config nu
+cd ~/Repos/Github/Gaxx-nushell/
+gf upstream
+gm
+gm upstream/main
+git merge upstream/main
+gst
+nvim
+ls
+ls
+rm -i testfolder/
+rm -ri testfolder
+ls
+df -u
+help du
+du -a
+gf upstream
+gm upstream/main
+gl
+gst
+help def
+sudo snap install screenkey
+sudo snap install screenkey --beta
+cd ~
+ls 
+cd .config/
+ls
+cd ..
+ls
+screenkey
+screenkey size 8
+screen --opacity 50
+screenkey --opacity 50
+screenkey --opacity 50%
+screenkey --opacity 20
+sudo snap remove screenkey
+screekey
+screenkey
+sudp apt remove screenkey
+ls
+cd Repos/
+cd Github/
+cls
+ls
+cd Gaxx-nushell/
+gco gaxx/FixCP
+gl
+git push
+git merge main
+gco main
+gf upstream
+gm upstream/main
+gco gaxx/FixCP
+gl
+gst
+gl
+gst
+gl
+git log
+git push
+gst
+ls
+jj
+gco main
+gl
+ls
+det print [name] { name + "Yo" } ; print 10
+def print [name] { name + "Yo" } ; print 10
+def print [name] { $name + "Yo" } ; print 10
+def print [name] { $name } ; print 10
+def print [name] { $name } ; print abc
+helo fetch
+help fetch
+fetch https://github.com/jftuga/less-Windows/releases/download/less-v590/less.exe
+help fetch
+ls
+cd Repos
+ls
+cd Github/
+ls
+git push 
+git push --all
+cd Gaxx-nushell/
+git push
+g
+config nu
+gf upstream
+gm upstream/main
+gst
+ls
+cd Repos/Github/Gaxx-nushell/
+cd Repos/Github/Gaxx-nushell
+help git
+cd Repos/Github/Gaxx-nushell/
+config nu
+cd ~/Downloads/
+ls
+./Obsidian-0.14.6.AppImage
+sudo ./Obsidian-0.14.6.AppImage
+sh ./Obsidian-0.14.6.AppImage
+config nu
+lg
+config nu
+obsidian
+nvim
+ls
+nvim --version
+nvim
+ls
+cd .local/share/nvim/
+ls
+cd sessions/
+ls -la
+ls | order-by modified
+ls | sort-by modified
+ls | sort-by modified | reverse
+rm -rfv *
+ls
+nvim
+s
+ls
+cd Repos/Github/Gaxx-nushell/
+ls
+hel overlay
+help overlay
+help hide
+cd Repos/Github/Gaxx-nushell/
+cd ~/Downloads/
+ls
+cd Repos/Github/Gaxx-nushell/
+clera
+clear
+cd Repos/Github/Gaxx-nushell/
+nvim
+cargo new --lib lists
+cd lists/
+ls
+git
+ls
+ls -la
+lg
+nvim
+lg
+cargo test -- --nocapture
+cargo test --help
+cargo help test
+cargo test -- --help
+cargo test -- --nocapture
+lg
+nvim
+./Obsidian-0.14.6.AppImage
+cd ~
+ls
+cd .config/
+ls
+cd lazygit/
+ls
+nvim config.yml
+less config.yml
+less state.yml
+nvim config.yml
+nvim
+cd Repos/Github/Gaxx-nushell/
+config nu
+cd Repos/Github/Gaxx-nushell/
+g CONTRIBUTING.md
+cd Repos/Github/Gaxx-nushell/
+git checkout 
+cd Repos/Github/Gaxx-nushell/
+git checkout 
+cd Repos/Github/Gaxx-nushell/
+git checkout 1
+cd Repos/Github/Gaxx-nushell/
+open ~/.zshrc
+ls
+ls -la
+cd .vscode/
+ls
+open launch.json
+cd ..
+ls
+ls -la
+cd .cargo/
+ls
+less config.toml
+cd ..
+ls
+ls -la
+ls .vscode/
+cd ..
+ls
+git clone git@github.com:Kangaxx-0/Dotfiles.git
+cd Dotfiles/
+ls
+gco main
+ls
+gf
+ls
+mkdir Nu
