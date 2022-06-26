@@ -1,6 +1,14 @@
-# Nushell Config F
+# Nushell Config
+
 # Alias
 alias lg = lazygit
+alias ll = _ls -l --sort=time
+alias _ls = exa --color=always --group-directories-first --icons
+alias cg = cargo
+alias grep = rg
+alias settings = nvim ~/.config/alacritty/alacritty.yml
+alias tm = tmux
+alias tk = tmux kill-session -t 0
 
 # Git Cheat Sheet
 alias g = git
@@ -133,7 +141,8 @@ use completions *
 
 # for more information on themes see
 # https://www.nushell.sh/book/coloring_and_theming.html
-let default_theme = {
+
+let dark_theme = {
     # color for nushell primitives
     separator: white
     leading_trailing_space_bg: { attr: n } # no fg, no bg, attr none effectively turns this off
@@ -184,24 +193,85 @@ let default_theme = {
     shape_nothing: light_cyan
 }
 
+let light_theme = {
+    # color for nushell primitives
+    separator: dark_gray
+    leading_trailing_space_bg: { attr: n } # no fg, no bg, attr none effectively turns this off
+    header: green_bold
+    empty: blue
+    bool: dark_gray
+    int: dark_gray
+    filesize: dark_gray
+    duration: dark_gray
+    date: dark_gray
+    range: dark_gray
+    float: dark_gray
+    string: dark_gray
+    nothing: dark_gray
+    binary: dark_gray
+    cellpath: dark_gray
+    row_index: green_bold
+    record: white
+    list: white
+    block: white
+    hints: dark_gray
+
+    # shapes are used to change the cli syntax highlighting
+    shape_garbage: { fg: "#FFFFFF" bg: "#FF0000" attr: b}
+    shape_binary: purple_bold
+    shape_bool: light_cyan
+    shape_int: purple_bold
+    shape_float: purple_bold
+    shape_range: yellow_bold
+    shape_internalcall: cyan_bold
+    shape_external: cyan
+    shape_externalarg: green_bold
+    shape_literal: blue
+    shape_operator: yellow
+    shape_signature: green_bold
+    shape_string: green
+    shape_string_interpolation: cyan_bold
+    shape_datetime: cyan_bold
+    shape_list: cyan_bold
+    shape_table: blue_bold
+    shape_record: cyan_bold
+    shape_block: blue_bold
+    shape_filepath: cyan
+    shape_globpattern: cyan_bold
+    shape_variable: purple
+    shape_flag: blue_bold
+    shape_custom: green
+    shape_nothing: light_cyan
+}
+
 # The default config record. This is where much of your global configuration is setup.
 let-env config = {
-  filesize_metric: false
-  table_mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
-  use_ls_colors: true
-  rm_always_trash: false
-  color_config: $default_theme
-  use_grid_icons: true
-  footer_mode: "25" # always, never, number_of_rows, auto
-  quick_completions: true  # set this to false to prevent auto-selecting completions when only one remains
-  partial_completions: true  # set this to false to prevent partial filling of the prompt
-  animate_prompt: false # redraw the prompt every second
-  float_precision: 2
-  use_ansi_coloring: true
-  filesize_format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, zb, zib, auto
-  edit_mode: emacs # emacs, vi
-  max_history_size: 10001 # Session has to be reloaded for this to take effect
-  sync_history_on_enter: true # Enable to share the history between multiple sessions, else you have to close the session to persist history to file
+ # buffer_editor = "vi"
+    filesize_metric: false
+    table_mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
+    use_ls_colors: true
+    rm_always_trash: false
+    color_config: $dark_theme   # if you want a light theme, replace `$dark_theme` to `$light_theme`
+    use_grid_icons: true
+    footer_mode: "25" # always, never, number_of_rows, auto
+    quick_completions: true  # set this to false to prevent auto-selecting completions when only one remains
+    partial_completions: true  # set this to false to prevent partial filling of the prompt
+    completion_algorithm: "prefix"  # prefix, fuzzy
+    animate_prompt: false # redraw the prompt every second
+    float_precision: 2
+    buffer_editor: "nvim" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
+    use_ansi_coloring: true
+    filesize_format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, zb, zib, auto
+    edit_mode: emacs # emacs, vi
+    max_history_size: 10000 # Session has to be reloaded for this to take effect
+    sync_history_on_enter: true # Enable to share the history between multiple sessions, else you have to close the session to persist history to file
+    history_file_format: "plaintext" # "sqlite" or "plaintext"
+    shell_integration: true # enables terminal markers and a workaround to arrow keys stop working issue
+    disable_table_indexes: false # set to true to remove the index column from tables
+    cd_with_abbreviations: false # set to true to allow you to do things like cd s/o/f and nushell expand it to cd some/other/folder
+    case_sensitive_completions: false # set to true to enable case-sensitive completions
+    enable_external_completion: true #
+
   menus: [
       # Configuration for default nushell menus
       # Note the lack of souce parameter
@@ -383,7 +453,7 @@ let-env config = {
     {
       name: commands_with_description
       modifier: control
-      keycode: char_u
+      keycode: char_s
       mode: [emacs, vi_normal, vi_insert]
       event: { send: menu name: commands_with_description }
     }
