@@ -1,0 +1,32 @@
+disableStartupPopups: true
+reporting: "off"
+startPopupVersion: 1k
+# os:
+#   editCommand: 'nvim'
+#   editCommandTemplate: '{{editor}} +{{line}} -- {{filename}}'
+theme:
+  lightTheme: false # For terminals with a light background
+  activeBorderColor:
+    - green
+    - bold
+  inactiveBorderColor:
+    - white
+  optionsTextColor:
+    - blue
+  selectedLineBgColor:
+    - default # set to `default` to have no background colour
+  selectedRangeBgColor:
+    - blue
+  cherryPickedCommitBgColor:
+    - cyan
+  cherryPickedCommitFgColor:
+    - blue
+  unstagedChangesColor:
+    - red
+gui:
+  showIcons: true
+  sidePanelWidth: 0.2 # gives you more space to show things side-by-side
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
