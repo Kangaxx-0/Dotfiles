@@ -14,7 +14,7 @@ theme:
   optionsTextColor:
     - blue
   selectedLineBgColor:
-    - default # set to `default` to have no background colour
+    - blue # set to `default` to have no background colour
   selectedRangeBgColor:
     - blue
   cherryPickedCommitBgColor:
