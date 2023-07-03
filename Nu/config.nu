@@ -54,16 +54,11 @@ alias ga = git add
 alias gm = git merge
 alias grh = git reset HEAD
 alias grhh = git reset HEAD --hard
-alias gclean = git reset --hard && git clean -dfx
 alias gwc = git whatchanged -p --abbrev-commit --pretty=medium
 alias gsts = git stash show --text
 alias gsta = git stash
 alias gstp = git stash pop
 alias gstd = git stash drop
-alias ggpull = git pull origin $(current_branch)
-alias ggpur = git pull --rebase origin $(current_branch)
-alias ggpush = git push origin $(current_branch)
-alias ggpnp = git pull origin $(current_branch) && git push origin $(current_branch)
 alias glp = _git_log_prettily
 
 module completions {
