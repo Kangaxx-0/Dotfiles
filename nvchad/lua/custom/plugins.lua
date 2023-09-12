@@ -1,4 +1,26 @@
 local plugins = {
+  -- default_plugin_config_replace = {
+  --   nvterm = {
+  --     type_opts = {
+  --       float = {
+  --         relative = "editor",
+  --         row = 0.7,
+  --         col = 0.7,
+  --         width = 0.7,
+  --         height = 0.7,
+  --         border = "single",
+  --       },
+  --       behavior = {
+  --         autoclose_on_quit = {
+  --           enabled = true,
+  --           confirm = false,
+  --         },
+  --         close_on_exit = true,
+  --         auto_insert = true,
+  --       },
+  --     },
+  --   },
+  -- },
   {
     "williamboman/mason.nvim",
     opts = {
@@ -52,10 +74,35 @@ local plugins = {
   },
   {
     "phaazon/hop.nvim",
-
     lazy = false,
     require("hop").setup {
       keys = "etovxqpdygfblzhckisuran",
+    },
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    lazy = false,
+    require("toggleterm").setup {
+      size = 20,
+      open_mapping = [[<c-\>]],
+      hide_numbers = true,
+      shade_filetypes = {},
+      shade_terminals = true,
+      shading_factor = 2,
+      start_in_insert = true,
+      insert_mappings = true,
+      persist_size = true,
+      direction = "float",
+      close_on_exit = true,
+      shell = vim.o.shell,
+      float_opts = {
+        border = "curved",
+        winblend = 0,
+        highlights = {
+          border = "Normal",
+          background = "Normal",
+        },
+      },
     },
   },
 }

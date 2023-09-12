@@ -17,8 +17,17 @@ M.disabled = {
     ["<leader>pp"] = "",
     ["<leader>sp"] = "",
     ["<leader>fm"] = "",
+    ["<leader>ra"] = "",
+    ["<leader>rn"] = "",
+    ["<leader>wK"] = "",
+    ["<leader>pt"] = "",
     ["<leader><leader>"] = "",
     ["<leader>q"] = "",
+    ["<leader>D"] = "",
+    ["<leader>e"] = "",
+    ["<leader>n"] = "",
+    ["<leader>v"] = "",
+    ["<leader>x"] = "",
     ["<A-1>"] = "",
     ["<A-f>"] = "",
     ["<C-Up>"] = "",
@@ -42,8 +51,18 @@ M.disabled = {
 M.gaxx = {
   n = {
     -- Move tab/buffers
-    ["<A-l>"] = { ":bnext <CR>", "Move to next buffer" },
-    ["<A-h>"] = { ":bprevious <CR>", "Move to previous buffer" },
+    ["<A-l>"] = {
+      function()
+        require("nvchad.tabufline").tabuflineNext()
+      end,
+      "Move to next buffer",
+    },
+    ["<A-h>"] = {
+      function()
+        require("nvchad.tabufline").tabuflinePrev()
+      end,
+      "Move to previous buffer",
+    },
     ["<leader>ba"] = { "<cmd>bufdo bd <CR>", "Close all buffers" },
     ["<leader>wc"] = { "<cmd>quit <CR>", "Close window" },
     ["<leader>q"] = { "<cmd>bd <CR>", "Close buffer" },
@@ -58,17 +77,26 @@ M.gaxx = {
     ["<C-Down>"] = { ":resize -2 <CR>", "Decrease window height" },
     ["<C-Left>"] = { ":vertical resize +2 <CR>", "Increase window width" },
     ["<C-Right>"] = { ":vertical resize -2 <CR>", "Decrease window width" },
-    -- ["<leader>h"] = { "<cmd>nohlsearch<CR>", "Clear highlights" },
     -- Telescope
-    ["<leader>sp"] = { "<cmd>Telescope live_grep <CR>", "Search" },
-    ["<leader><leader>"] = { "<cmd>Telescope find_files <CR>", "Search files" },
-    ["<leader>pp"] = { "<cmd>Telescope projects <CR>", "Search projects" },
+    ["<leader>fp"] = { "<cmd>Telescope projects <CR>", "Search projects" },
     -- Git
-    ["<leader>gg"] = { "<cmd>lua _LAZYGIT_TOGGLE() <CR>", "Toggle lazygit" },
+    ["<leader>gg"] = {
+      function()
+        require "custom.toggleterm"
+        _LAZYGIT_TOGGLE()
+      end,
+      "lazygit",
+    },
     ["<leader>gb"] = { "<cmd>GitBlameToggle <CR>", "Toggle git blame" },
     ["<leader>gc"] = { "<cmd>GitBlameCopyCommitURL <CR>", "Copy commit url" },
     -- Editing
     ["<C-a>"] = { "Select all", "Select all text in buffer" },
+    ["<C-r>"] = {
+      function()
+        require("nvchad.renamer").open()
+      end,
+      "LSP rename",
+    },
     ["<leader>cf"] = {
       function()
         vim.lsp.buf.format { async = true }
