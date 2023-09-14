@@ -137,6 +137,8 @@ M.gaxx = {
     ["<leader>cc"] = { "<cmd>Copilot panel <CR>", "Copilot Suggestion" },
     ["<A-1>"] = { "<cmd>NvimTreeToggle <CR>", "Toggle file explorer" },
     ["<A-f>"] = { "<cmd>SymbolsOutline <CR>", "Toggle symbols outline" },
+    -- Other
+    ["<leader>tc"] = { "<cmd>e ~/.config/nvim/lua/<cr>", "Find private config" },
   },
 
   i = {
