@@ -19,6 +19,7 @@ M.disabled = {
     ["<leader>fm"] = "",
     ["<leader>ra"] = "",
     ["<leader>rn"] = "",
+    ["<leader>f"] = "",
     ["<leader>wK"] = "",
     ["<leader>pt"] = "",
     ["<leader><leader>"] = "",
@@ -73,6 +74,12 @@ M.gaxx = {
     ["<leader>wl"] = { "<C-w>l", "Move right window" },
     ["<leader>wv"] = { "<cmd>vsplit <CR>", "Vertical split" },
     ["<leader>ws"] = { "<cmd>split <CR>", "Horizontal split" },
+    ["gl"] = {
+      function()
+        vim.diagnostic.open_float { border = "rounded" }
+      end,
+      "Floating diagnostic",
+    },
     ["<C-Up>"] = { ":resize +2 <CR>", "Increase window height" },
     ["<C-Down>"] = { ":resize -2 <CR>", "Decrease window height" },
     ["<C-Left>"] = { ":vertical resize +2 <CR>", "Increase window width" },
