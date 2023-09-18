@@ -98,7 +98,7 @@ M.gaxx = {
     ["<leader>gc"] = { "<cmd>GitBlameCopyCommitURL <CR>", "Copy commit url" },
     -- Editing
     ["<C-a>"] = { "Select all", "Select all text in buffer" },
-    ["<C-r>"] = {
+    ["<leader>cr"] = {
       function()
         require("nvchad.renamer").open()
       end,
