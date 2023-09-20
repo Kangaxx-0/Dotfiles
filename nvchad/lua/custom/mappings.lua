@@ -65,6 +65,17 @@ M.gaxx = {
       "Move to previous buffer",
     },
     ["<leader>ba"] = { "<cmd>bufdo bd <CR>", "Close all buffers" },
+    ["<leader>bo"] = {
+      function()
+        local current_buf = vim.api.nvim_get_current_buf()
+        for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+          if buf ~= current_buf then
+            vim.api.nvim_buf_delete(buf, {})
+          end
+        end
+      end,
+      "Close all buffers",
+    },
     ["<leader>wc"] = { "<cmd>quit <CR>", "Close window" },
     ["<leader>q"] = { "<cmd>bd <CR>", "Close buffer" },
     -- Manage windows
