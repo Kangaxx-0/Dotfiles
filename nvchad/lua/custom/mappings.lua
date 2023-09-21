@@ -35,6 +35,8 @@ M.disabled = {
     ["<C-Down>"] = "",
     ["<C-Left>"] = "",
     ["<C-Right>"] = "",
+    ["<C-[>"] = "",
+    ["<C-]>"] = "",
   },
   v = {
     ["<A-Up>"] = "",
@@ -95,8 +97,6 @@ M.gaxx = {
     ["<C-Down>"] = { ":resize -2 <CR>", "Decrease window height" },
     ["<C-Left>"] = { ":vertical resize +2 <CR>", "Increase window width" },
     ["<C-Right>"] = { ":vertical resize -2 <CR>", "Decrease window width" },
-    -- Telescope
-    ["<leader>fp"] = { "<cmd>Telescope projects <CR>", "Search projects" },
     -- Git
     ["<leader>gg"] = {
       function()
