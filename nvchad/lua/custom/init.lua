@@ -1,5 +1,6 @@
 local opt = vim.opt
 
+opt.swapfile = false
 opt.spell = true
 opt.spelllang = "en_us"
 opt.number = true
