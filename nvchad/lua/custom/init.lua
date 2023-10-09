@@ -5,6 +5,7 @@ opt.spell = true
 opt.spelllang = "en_us"
 opt.number = true
 opt.relativenumber = true
+opt.jumpoptions = "stack"
 opt.spellfile = "~/.config/nvim/spell/en.utf-8.add"
 
 vim.cmd "behave mswin" -- <C-x><C-s> show popup menu to fix spell error
