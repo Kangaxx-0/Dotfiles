@@ -26,6 +26,7 @@ M.disabled = {
     ["<leader>q"] = "",
     ["<leader>D"] = "",
     ["<leader>e"] = "",
+    ["<leader>h"] = "",
     ["<leader>n"] = "",
     ["<leader>v"] = "",
     ["<leader>x"] = "",
@@ -99,6 +100,12 @@ M.gaxx = {
     ["<leader>wl"] = { "<C-w>l", "Move right window" },
     ["<leader>wv"] = { "<cmd>vsplit <CR>", "Vertical split" },
     ["<leader>ws"] = { "<cmd>split <CR>", "Horizontal split" },
+    ["<C-`>"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "Toggle floating term",
+    },
     ["gl"] = {
       function()
         vim.diagnostic.open_float { border = "rounded" }
@@ -166,6 +173,7 @@ M.gaxx = {
     ["<leader>cx"] = { "<cmd>Trouble <CR>", "List All" },
     ["<leader>cc"] = { "<cmd>Copilot panel <CR>", "Copilot Suggestion" },
     ["<A-1>"] = { "<cmd>NvimTreeToggle <CR>", "Toggle file explorer" },
+    ["<leader>h"] = { "<cmd>NvimTreeToggle <CR>", "Toggle file explorer" },
     ["<A-f>"] = { "<cmd>SymbolsOutline <CR>", "Toggle symbols outline" },
     -- Other
     ["<leader>tc"] = { "<cmd>e ~/.config/nvim/lua/<cr>", "Find private config" },
