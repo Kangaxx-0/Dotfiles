@@ -38,6 +38,7 @@ M.disabled = {
     ["<C-Right>"] = "",
     ["<C-[>"] = "",
     ["<C-]>"] = "",
+    ["<C-`>"] = "",
   },
   v = {
     ["<A-Up>"] = "",
@@ -100,11 +101,11 @@ M.gaxx = {
     ["<leader>wl"] = { "<C-w>l", "Move right window" },
     ["<leader>wv"] = { "<cmd>vsplit <CR>", "Vertical split" },
     ["<leader>ws"] = { "<cmd>split <CR>", "Horizontal split" },
-    ["<C-`>"] = {
+    ["<C-h>"] = {
       function()
-        require("nvterm.terminal").toggle "float"
+        require("nvterm.terminal").toggle "horizontal"
       end,
-      "Toggle floating term",
+      "Toggle horizontal term",
     },
     ["gl"] = {
       function()
