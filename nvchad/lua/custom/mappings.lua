@@ -127,6 +127,12 @@ M.gaxx = {
     },
     ["<leader>gb"] = { "<cmd>GitBlameToggle <CR>", "Toggle git blame" },
     ["<leader>gc"] = { "<cmd>GitBlameCopyCommitURL <CR>", "Copy commit url" },
+    ["gt"] = {
+      function()
+        vim.lsp.buf.type_definition()
+      end,
+      "LSP Type Definition",
+    },
     -- Editing
     ["<C-a>"] = { "Select all", "Select all text in buffer" },
     ["<leader>cr"] = {
