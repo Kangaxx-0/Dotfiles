@@ -117,6 +117,7 @@ M.gaxx = {
     ["<C-Down>"] = { ":resize -2 <CR>", "Decrease window height" },
     ["<C-Left>"] = { ":vertical resize +2 <CR>", "Increase window width" },
     ["<C-Right>"] = { ":vertical resize -2 <CR>", "Decrease window width" },
+
     -- Git
     ["<leader>gg"] = {
       function()
@@ -133,20 +134,15 @@ M.gaxx = {
       end,
       "LSP Type Definition",
     },
+
+    -- Rust
+    ["<leader>rr"] = { ":RustLsp runnables <CR>", "Runnables" },
+    ["<leader>rt"] = { ":RustLsp openCargo <CR>", "Open TOML" },
+    ["<leader>rj"] = { ":RustLsp joinLines <CR>", "Join lines" },
+    ["<leader>ra"] = { ":RustLsp hover actions <CR>", "Hover actions" },
+
     -- Editing
     ["<C-a>"] = { "Select all", "Select all text in buffer" },
-    ["<leader>cr"] = {
-      function()
-        require("nvchad.renamer").open()
-      end,
-      "LSP rename",
-    },
-    ["<leader>cf"] = {
-      function()
-        vim.lsp.buf.format { async = true }
-      end,
-      "LSP formatting",
-    },
     ["f"] = {
       function()
         require("hop").hint_char1 { direction = require("hop.hint").HintDirection.AFTER_CURSOR, current_line_only = true }
@@ -177,8 +173,28 @@ M.gaxx = {
       end,
       "Hop Backward x 2",
     },
+    -- Key C bindings
     ["<leader>cx"] = { "<cmd>Trouble <CR>", "List All" },
     ["<leader>cc"] = { "<cmd>Copilot panel <CR>", "Copilot Suggestion" },
+    ["<leader>ca"] = {
+      function()
+        vim.lsp.buf.code_action()
+      end,
+      "Code actions",
+    },
+    ["<leader>cf"] = {
+      function()
+        vim.lsp.buf.format { async = true }
+      end,
+      "LSP formatting",
+    },
+    ["<leader>cr"] = {
+      function()
+        require("nvchad.renamer").open()
+      end,
+      "LSP rename",
+    },
+
     ["<A-1>"] = { "<cmd>NvimTreeToggle <CR>", "Toggle file explorer" },
     ["<leader>h"] = { "<cmd>NvimTreeToggle <CR>", "Toggle file explorer" },
     ["<A-f>"] = { "<cmd>SymbolsOutline <CR>", "Toggle symbols outline" },
@@ -195,7 +211,6 @@ M.gaxx = {
     ["<"] = { "<gc", "Identation -> Left" },
     ["<A-j>"] = { ":m .+1<CR>==", "Move text up" },
     ["<A-k>"] = { ":m .-2<CR>==", "Move text down" },
-    -- keymap("v", "p", '"_dP', opts)
   },
 
   x = {
