@@ -73,6 +73,14 @@ local plugins = {
 		},
 	},
 	{
+		"NvChad/nvim-colorizer.lua",
+		opts = {
+			user_default_options = {
+				names = false,
+			},
+		},
+	},
+	{
 		"williamboman/mason.nvim",
 		opts = {
 			ensure_installed = {
@@ -169,10 +177,25 @@ local plugins = {
 			require("core.utils").load_mappings("crates")
 		end,
 	},
+	-- {
+	--   "mrcjkb/rustaceanvim",
+	--   ft = { "rust" },
+	--   version = "^3",
+	--   lazy = false,
+	-- },
 	{
-		"mrcjkb/rustaceanvim",
+		"simrat39/rust-tools.nvim",
 		ft = { "rust" },
-		version = "^3",
+		-- version = "^3",
+		dependencies = {
+			"neovim/nvim-lspconfig",
+		},
+		opts = function()
+			return require("custom.configs.rust-tools")
+		end,
+		config = function(_, opts)
+			require("rust-tools").setup(opts)
+		end,
 	},
 	{
 		"jackMort/ChatGPT.nvim",

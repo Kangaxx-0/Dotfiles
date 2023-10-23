@@ -136,10 +136,10 @@ M.gaxx = {
     },
 
     -- Rust
-    ["<leader>rr"] = { ":RustLsp runnables <CR>", "Runnables" },
-    ["<leader>rt"] = { ":RustLsp openCargo <CR>", "Open TOML" },
-    ["<leader>rj"] = { ":RustLsp joinLines <CR>", "Join lines" },
-    ["<leader>ra"] = { ":RustLsp hover actions <CR>", "Hover actions" },
+    ["<leader>rr"] = { "<cmd>RustRunnables<CR>", "Runnables" },
+    ["<leader>rt"] = { "<cmd>RustOpenCargo<CR>", "Open TOML" },
+    ["<leader>rj"] = { "<cmd>RustJoinLines<CR>", "Join lines" },
+    ["<leader>ra"] = { "<cmd>RustHoverActions<CR>", "Hover actions" },
 
     -- Editing
     ["<C-a>"] = { "Select all", "Select all text in buffer" },
