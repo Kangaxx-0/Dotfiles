@@ -117,6 +117,15 @@ local plugins = {
   {
     "folke/trouble.nvim",
     lazy = false,
+    opts = {},
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    lazy = false,
+    opts = {},
   },
   {
     "github/copilot.vim",
